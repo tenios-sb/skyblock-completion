@@ -52,11 +52,9 @@ class Player {
     }
 
     findLatestProfile() {
-        let lastTime = -1;
         this.profiles.forEach(profile => {
-            if (profile.lastPlayed > lastTime) {
+            if (profile.selected) {
                 this.latestProfile = profile;
-                lastTime = profile.lastPlayed;
             }
         })
     }

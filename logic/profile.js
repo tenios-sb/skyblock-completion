@@ -9,7 +9,7 @@ class Profile {
         this.playerData = playerData;
         this.mode = profileData?.game_mode || 'default';
         this.name = profileData?.cute_name || 'sb-comp-invalid-profile';
-        this.lastPlayed = profileData?.members?.[this.uuid]?.last_save || profileData?.last_save || 0;
+        this.selected = profileData?.selected || false;
     }
 
     async calculateCompletion() {
