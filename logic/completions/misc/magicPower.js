@@ -302,11 +302,9 @@ class MagicPower extends BaseCompletion {
 
 
         });
-        let debug = {}
 
         Object.entries(talismanObj).forEach(([line, rarity]) => {
             let magicPower = 0;
-            debug[rarity] = (debug?.[rarity] || 0) + 1
             switch (rarity) {
                 case 0:
                     magicPower = 3;

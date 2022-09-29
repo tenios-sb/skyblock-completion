@@ -46,7 +46,9 @@ class Player {
                 const profile = new Profile(this.uuid, profileData, this.hypixelPlayer);
                 this.profiles.push(profile);
             }
-            return Promise.all(this.profiles.map(profile => profile.calculateCompletion()));
+            return Promise.all(this.profiles.map(profile => {
+                return Promise.all([profile.calculateCompletion(), profile.calculateLevels()]);
+            }));
         }, (err) => console.log(err));
 
     }

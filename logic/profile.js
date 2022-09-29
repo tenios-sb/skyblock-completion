@@ -1,9 +1,11 @@
 const getCompletions = require('./completions/completionList');
+const getLevels = require('./levels/levelList');
 
 class Profile {
 
     constructor(uuid, profileData, playerData) {
         this.completions = getCompletions();
+        this.levels = getLevels();
         this.uuid = uuid;
         this.profileData = profileData;
         this.playerData = playerData;
@@ -14,6 +16,14 @@ class Profile {
 
     async calculateCompletion() {
         await Promise.all([...this.completions.map(completion => completion.calculateCompletion(this.uuid, this.profileData, this.playerData))]);
+    }
+
+    async calculateLevels() {
+        await Promise.all([...this.levels.map(level => level.calculateXp(this.uuid, this.profileData, this.playerData))]);
+    }
+
+    getSkyblockXp() {
+        return this.levels.reduce((prev, cur) => prev + cur.xp, 0);
     }
 
     getOverallCompletion() {
@@ -37,6 +47,9 @@ class Profile {
         object.completion = this.getOverallCompletion();
         object.completions = {}
         this.completions.forEach(comp => object.completions[comp.id] = comp.toJsonObject(this.mode === 'island'));
+        this.sbXp = this.getSkyblockXp();
+        object.levels = {}
+        this.levels.forEach(level => object.levels[level.id] = level.xp);
         return object;
     }
 
