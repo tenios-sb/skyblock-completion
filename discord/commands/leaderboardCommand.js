@@ -10,7 +10,16 @@ class LeaderboardCommand extends BaseCommand {
     constructor(db) {
         super('leaderboard');
         this.db = db;
-        this.categories = getCategories();
+        this.categories = getCategories().map(category => {
+            return {
+                name: category.name,
+                value: category.id
+            }
+        });
+        this.categories.push({
+            name: 'Skyblock Levels',
+            value: 'sbXp'
+        })
     }
 
     async handleCommand(interaction) {
@@ -22,7 +31,7 @@ class LeaderboardCommand extends BaseCommand {
         let categoryInput = interaction.options.getString('category');
         let category = null;
         this.categories.forEach(c => {
-            if (c.id === categoryInput || c.name.toLowerCase() === categoryInput?.toLowerCase()?.trim())
+            if (c.value === categoryInput || c.name.toLowerCase() === categoryInput?.toLowerCase()?.trim())
                 category = c;
         })
         let mode = interaction.options.getString('mode') || 'all';
@@ -100,7 +109,7 @@ class LeaderboardCommand extends BaseCommand {
     }
 
     async getLeaderboardEmbed(page, name = null, guild = null, mode = 'all', category = null) {
-        let cursor = await getLeaderboard(this.db, page, mode, guild, category?.id);
+        let cursor = await getLeaderboard(this.db, page, mode, guild, category?.value);
         let embedString = '```yaml\n';
         let counter = (page - 1) * 20;
         let title = category?.name || 'Completion'
@@ -112,7 +121,7 @@ class LeaderboardCommand extends BaseCommand {
             embedString += counter + ': ';
             embedString += player.name + ': ';
             if (category)
-                embedString += this.formatNumber(player.index);
+                embedString += this.formatNumber(player.index || 0);
             else
                 embedString += this.formatPercentage(player.completion)
             embedString += this.getProfileEmoji(player.mode);
@@ -145,7 +154,7 @@ class LeaderboardCommand extends BaseCommand {
         let results = []
         this.categories.forEach(c => {
             if (!(words.some(word => !(c.name.toLowerCase().includes(word.toLowerCase())))))
-                results.push({ name: c.name, value: c.id });
+                results.push(c);
         })
         interaction.respond(
             results.slice(0, 25))

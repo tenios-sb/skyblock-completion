@@ -1,4 +1,5 @@
 const CompletionCommand = require('./commands/completionCommand');
+const LevelsCommand = require('./commands/levelsCommand');
 const ContactCommand = require('./commands/contactsCommand');
 const LeaderBoardCommand = require('./commands/leaderboardCommand');
 
@@ -8,6 +9,7 @@ class CommandHandler {
     constructor(db) {
         this.commands = [
             new CompletionCommand(db),
+            new LevelsCommand(db),
             new LeaderBoardCommand(db),
             new ContactCommand(db),
         ]

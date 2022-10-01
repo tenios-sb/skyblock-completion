@@ -1,7 +1,7 @@
 function getLeaderboard(db, page, mode = 'all', guild = null, category = null) {
     let query = [];
     const stat = category || 'null';
-    const path = category ? `completions.${category}.value` : 'completion'
+    const path = category ? (category === 'sbXp' ? 'sbXp' : `completions.${category}.value`) : 'completion'
 
     if (guild)
         query.push({

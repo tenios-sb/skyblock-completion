@@ -12,9 +12,9 @@ class BaseCommand {
 
     }
 
-    formatPercentage(number) {
-        let cutoff = parseInt(number * 1000000);
-        let percent = cutoff / 10000;
+    formatPercentage(number, decimals = 4) {
+        let cutoff = parseInt(number * 100 * 10 ** decimals);
+        let percent = cutoff / 10 ** decimals;
         return `${percent}%`;
     }
 

@@ -47,7 +47,7 @@ class Profile {
         object.completion = this.getOverallCompletion();
         object.completions = {}
         this.completions.forEach(comp => object.completions[comp.id] = comp.toJsonObject(this.mode === 'island'));
-        this.sbXp = this.getSkyblockXp();
+        object.sbXp = this.getSkyblockXp();
         object.levels = {}
         this.levels.forEach(level => object.levels[level.id] = level.xp);
         return object;

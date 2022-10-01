@@ -27,6 +27,11 @@ const completion = new SlashCommandBuilder()
     .setDescription('Show a players progress in skyblock')
     .addStringOption(option => option.setName('username').setDescription('Minecraft username'))
     .addStringOption(option => option.setName('profile').setDescription('Profile name'))
+const levels = new SlashCommandBuilder()
+    .setName('levels')
+    .setDescription('Show a players skyblock xp')
+    .addStringOption(option => option.setName('username').setDescription('Minecraft username'))
+    .addStringOption(option => option.setName('profile').setDescription('Profile name'))
 
 const contacts = new SlashCommandBuilder()
     .setName('contacts')
@@ -37,6 +42,7 @@ const contacts = new SlashCommandBuilder()
 commands.push(leaderboard.toJSON());
 commands.push(completion.toJSON());
 commands.push(contacts.toJSON());
+commands.push(levels.toJSON());
 
 
 const rest = new REST({ version: '10' }).setToken(token);
