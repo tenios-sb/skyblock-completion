@@ -4,7 +4,7 @@ const {taliData} =require('../util/constants');
 class AccessoryBag extends BaseLevel {
 
     constructor() {
-        super('talismans', 'Accessory Bag', 1197);
+        super('talismans', 'Accessory Bag', 1209);
     }
 
 
