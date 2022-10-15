@@ -76,4 +76,36 @@ class SkillLevels extends BaseLevel {
     }
 }
 
-module.exports = { CommissionMilestones, SkillLevels }
+class HeartOfTheMountain extends BaseLevel {
+
+    constructor() {
+        super('hotm', 'Heart of the Mountain', 1495);
+
+        this.cummulativeXp = [0, 3000, 12000, 37000, 97000, 197000, 347000];
+        this.hotmRewards = [35, 45, 60, 75, 90, 110, 130]
+    }
+
+    calculateXp(uuid, profileData, playerData) {
+        const profile = this.getProfile(uuid, profileData);
+        if (!profileData.selected) return;
+        let hotmXp = profile?.mining_core?.experience || 0;
+        let mithril = Math.min((profile?.mining_core?.[`powder_mithril`] || 0) + (profile?.mining_core?.[`powder_spent_mithril`] || 0), 12500000);
+        let gemstone = Math.min((profile?.mining_core?.[`powder_gemstone`] || 0) + (profile?.mining_core?.[`powder_spent_gemstone`] || 0), 20000000);
+        let hotmLevel = this.cummulativeXp.filter(x => x <= hotmXp).length;
+        this.xp = 0;
+        //note: -1 since hotm xp bugged rn and the highest level doesnt seem to give xp
+        for (let i = 0; i < hotmLevel - 1; i++) {
+            this.xp += this.hotmRewards[i];
+        }
+        let mithrilUnder = Math.min(350000, mithril);
+        let mithrilOver = Math.max(0, mithril - 350000);
+        let gemstoneUnder = Math.min(350000, gemstone);
+        let gemstoneOver = Math.max(0, gemstone - 350000);
+        this.xp += ~~(mithrilUnder / 2400);
+        this.xp += ~~(gemstoneUnder / 2500);
+        this.xp += mithrilOver ? ~~(3.75 * (Math.sqrt(1 + 8 * (Math.sqrt((1758267 / 12500000) * mithrilOver + 9))) - 3)) : 0
+        this.xp += gemstoneOver ? ~~(4.25 * (Math.sqrt(1 + 8 * (Math.sqrt((1758267 / 20000000) * gemstoneOver + 9))) - 3)) : 0
+    }
+}
+
+module.exports = { CommissionMilestones, SkillLevels, HeartOfTheMountain }

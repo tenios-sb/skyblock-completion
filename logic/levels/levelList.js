@@ -27,7 +27,7 @@ module.exports = getCompletions = () => {
 
         new Bestiary(),
         //hotm formula not known yet
-        //new HeartOfTheMountain(),
+        new HeartOfTheMountain(),
         new AccessoryBag(),
         new Pets(),
         //quests that contribute not known
