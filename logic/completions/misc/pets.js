@@ -1,6 +1,6 @@
 const BaseCompletion = require('../baseCompletion');
 
-const mythicPets = ['JERRY', 'FLYING_FISH', 'BAT', 'RAT', 'ENDERMAN'];
+const mythicPets = ['JERRY', 'FLYING_FISH', 'BAT', 'RAT', 'ENDERMAN', 'ENDERMITE'];
 
 class Pets extends BaseCompletion {
 
@@ -29,7 +29,11 @@ class Pets extends BaseCompletion {
         if (pet === 'KUUDRA') {
             switch (rarity) {
                 case 'COMMON':
+                    return 0.25;
+                case 'UNCOMMON':
                     return 0.5;
+                case 'RARE':
+                    return 0.75
                 default:
                     return 1;
             }
@@ -57,7 +61,7 @@ class Pets extends BaseCompletion {
         if (pet === 'GOLDEN_DRAGON')
             return 210255386;
         if (pet === 'KUUDRA')
-            return 8644220
+            return 18608500
         return 25353230
     }
 

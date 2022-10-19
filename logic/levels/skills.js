@@ -87,7 +87,6 @@ class HeartOfTheMountain extends BaseLevel {
 
     calculateXp(uuid, profileData, playerData) {
         const profile = this.getProfile(uuid, profileData);
-        if (!profileData.selected) return;
         let hotmXp = profile?.mining_core?.experience || 0;
         let mithril = Math.min((profile?.mining_core?.[`powder_mithril`] || 0) + (profile?.mining_core?.[`powder_spent_mithril`] || 0), 12500000);
         let gemstone = Math.min((profile?.mining_core?.[`powder_gemstone`] || 0) + (profile?.mining_core?.[`powder_spent_gemstone`] || 0), 20000000);

@@ -69,7 +69,7 @@ class BossCollections extends BaseLevel {
 class CataXp extends BaseLevel {
 
     constructor() {
-        super('cata_xp', 'Catacombs Level Up', 1180);
+        super('cata_xp', 'Catacombs Level Up', 1220);
     }
 
     calculateXp(uuid, profileData, playerData) {
@@ -81,8 +81,6 @@ class CataXp extends BaseLevel {
             if (cumulativeXp[level] > cataXp)
                 break;
         }
-        //note, currently bugged, cata 50 doesnt give any xp
-        level = Math.min(49, level);
         for (; level > 0; level--) {
             if (level > 39)
                 this.xp += 40;

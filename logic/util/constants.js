@@ -163,9 +163,17 @@ const taliData = {
     PARTY_HAT_CRAB: { line: 'CRAB', rarity: 1 },
     PARTY_HAT_CRAB_ANIMATED: { line: 'CRAB', rarity: 1 },
 
-    GREAT_SPOOK_TALISMAN: {line:'SPOOK', rarity:0},
-    GREAT_SPOOK_RING: {line:'SPOOK', rarity:1},
-    GREAT_SPOOK_ARTIFACT: {line:'SPOOK', rarity:2},
+    GREAT_SPOOK_TALISMAN: { line: 'SPOOK', rarity: 0 },
+    GREAT_SPOOK_RING: { line: 'SPOOK', rarity: 1 },
+    GREAT_SPOOK_ARTIFACT: { line: 'SPOOK', rarity: 2 },
+
+    BURNING_KUUDRA_CORE: { line: 'KUUDRA', rarity: 2 },
+    FIERY_KUUDRA_CORE: { line: 'KUUDRA', rarity: 3 },
+    INFERNAL_KUUDRA_CORE: { line: 'KUUDRA', rarity: 4 },
+
+    DRACONIC_TALISMAN: { line: 'DRACONIC', rarity: 1 },
+    DRACONIC_RING: { line: 'DRACONIC', rarity: 2 },
+    DRACONIC_ARTIFACT: { line: 'DRACONIC', rarity: 3 },
 
     FARMING_TALISMAN: { line: 'FARMING', rarity: 0 },
     VACCINE_TALISMAN: { line: 'VACCINE', rarity: 0 },
@@ -217,6 +225,7 @@ const taliData = {
     PANDORAS_BOX: { line: 'PANDORA', rarity: 4 },
     CHUMMING_TALISMAN: { line: 'CHUM', rarity: 1 },
     PULSE_RING: { line: 'PULSE', rarity: 1 },
+    ABICASE: { line: 'ABICASE', rarity: 2 },
 }
 
 module.exports = {
