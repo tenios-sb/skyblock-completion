@@ -3,7 +3,7 @@ const BaseCompletion = require('../baseCompletion');
 class PowerStones extends BaseCompletion {
 
     constructor() {
-        super('power_stones', 'Reforge Powers', 16, -1);
+        super('power_stones', 'Reforge Powers', 17, -1);
     }
 
     calculateCompletion(uuid, profileData, playerData) {
