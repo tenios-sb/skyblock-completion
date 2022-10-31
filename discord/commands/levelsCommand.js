@@ -67,7 +67,7 @@ class LevelsCommand extends BaseCommand {
 
         const embed = {
             title: `Skyblock Xp for ${username} (${profile.name}${this.getProfileEmoji(profile.mode)})`,
-            description: `Skyblock level: **${~~(totalXp / 100)}** (${this.formatNumber(totalXp)} xp)\n*Note: Due to limitations, this currently does not include museum, quests, hotm and bank upgrades.*`,
+            description: `Skyblock level: **${~~(totalXp / 100)}** (${this.formatNumber(totalXp)} xp)\n*Note: Due to limitations, this currently does not include bank upgrades, and assumes quests and museum are fully completed.*`,
             fields: [{
                 name: 'Skyblock Xp sources',
                 value: "```yaml\n",
