@@ -61,7 +61,7 @@ class Player {
         })
     }
 
-    getProfile(profileName) {
+    getProfile(profileName = '') {
         for (let profile of this.profiles) {
             if (profile.name.toLowerCase() === profileName.toLowerCase().trim())
                 return profile;

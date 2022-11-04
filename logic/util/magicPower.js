@@ -5,7 +5,7 @@ async function calculateMagicPower(profile) {
     const talismans = await getTalismanContents(profile?.talisman_bag?.data);
     let value = 0;
     let talismanObj = {};
-    if (!talismans) return;
+    if (!talismans) return 0;
     talismans.forEach(talisman => {
         const name = talisman?.tag?.value?.ExtraAttributes?.value?.id?.value || 'invalid'
         if (name === 'invalid') return;
