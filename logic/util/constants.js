@@ -175,8 +175,11 @@ const taliData = {
     DRACONIC_RING: { line: 'DRACONIC', rarity: 2 },
     DRACONIC_ARTIFACT: { line: 'DRACONIC', rarity: 3 },
 
-    FARMING_TALISMAN: { line: 'FARMING', rarity: 0 },
     VACCINE_TALISMAN: { line: 'VACCINE', rarity: 0 },
+    VACCINE_RING: { line: 'VACCINE', rarity: 1 },
+    VACCINE_ARTIFACT: { line: 'VACCINE', rarity: 2 },
+
+    FARMING_TALISMAN: { line: 'FARMING', rarity: 0 },
     WOOD_TALISMAN: { line: 'WOOD', rarity: 1 },
     SKELETON_TALISMAN: { line: 'SKELETON', rarity: 0 },
     COIN_TALISMAN: { line: 'COIN', rarity: 0 },
@@ -226,6 +229,8 @@ const taliData = {
     CHUMMING_TALISMAN: { line: 'CHUM', rarity: 1 },
     PULSE_RING: { line: 'PULSE', rarity: 1 },
     ABICASE: { line: 'ABICASE', rarity: 2 },
+    TRAPPER_CREST: { line: 'TRAPPER', rarity: 0 },
+    ARCHAEOLOGIST_COMPASS: { line: 'ARCHAEOLOGIST', rarity: 0 },
 }
 
 module.exports = {
