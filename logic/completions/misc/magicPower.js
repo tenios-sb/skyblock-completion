@@ -4,7 +4,7 @@ const calculateMagicPower = require('../../util/magicPower');
 class MagicPower extends BaseCompletion {
 
     constructor() {
-        super('magic_power', 'Magic Power', 1296, -1);
+        super('magic_power', 'Magic Power', 1299, -1);
     }
 
     async calculateCompletion(uuid, profileData, playerData) {

@@ -52,6 +52,8 @@ async function calculateMagicPower(profile) {
             //check for recombs
             if (talisman?.tag?.value?.ExtraAttributes?.value?.rarity_upgrades?.value === 1 && line !== 'CRAB')
                 rarity++;
+            if (name === 'TRAPPER_CREST' && talisman?.tag?.value?.ExtraAttributes?.value?.pelts_earned?.value >= 500)
+                rarity++;
             if (name === 'POWER_ARTIFACT') {
                 let gems = talisman?.tag?.value?.ExtraAttributes?.value?.gems?.value;
                 if (gems?.RUBY_0?.value === "PERFECT" &&
