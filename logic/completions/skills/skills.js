@@ -24,9 +24,7 @@ class Social extends BaseCompletion {
         this.value = 0;
         Object.values(profileData?.members || {}).forEach(member => {
             this.value += member?.experience_skill_social2 || 0;
-            console.log('member: ' + member?.experience_skill_social2)
         })
-        console.log(this.value);
     }
 
 }
