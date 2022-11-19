@@ -14,4 +14,24 @@ class Skill extends BaseCompletion {
 
 }
 
-module.exports = Skill
+class Social extends BaseCompletion {
+
+    constructor() {
+        super('social', 'Social XP', 272800, 272800);
+    }
+
+    calculateCompletion(uuid, profileData, playerData) {
+        this.value = 0;
+        Object.values(profileData?.members || {}).forEach(member => {
+            this.value += member?.experience_skill_social2 || 0;
+            console.log('member: ' + member?.experience_skill_social2)
+        })
+        console.log(this.value);
+    }
+
+}
+
+module.exports = {
+    Skill,
+    Social
+}

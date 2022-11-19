@@ -3,7 +3,7 @@ const MiningCommissions = require('./skills/miningCommissions');
 const PowderCommission = require('./skills/powderCompletions');
 const { FarmingFortuneShop, FarmingCap } = require('./skills/jacobShop');
 const TropyhFish = require('./skills/trophyFish');
-const Skill = require('./skills/skills');
+const { Skill, Social } = require('./skills/skills');
 const BossCollection = require('./dungeons/bossCollections');
 const Catacombs = require('./dungeons/catacombs');
 const DungeonClass = require('./dungeons/dungeonClasses');
@@ -89,7 +89,7 @@ module.exports = getCompletions = () => {
         new Skill('Foraging', 55172425),
         new Skill('Carpentry', 55172425),
         new Skill('Runecrafting', 94450, -1),
-        new Skill('Social', 272800, 272800, 'social2'),
+        new Social(),
 
         //boss collections
         new BossCollection("1"),
