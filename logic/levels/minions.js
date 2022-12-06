@@ -3,7 +3,7 @@ const BaseLevel = require('./baseLevel');
 class Minions extends BaseLevel {
 
     constructor() {
-        super('minions', 'Craft Minions', 2753);
+        super('minions', 'Craft Minions', 2801);
         this.xpTable = {
             1: 1,
             2: 1,

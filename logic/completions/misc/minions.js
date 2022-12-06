@@ -3,7 +3,7 @@ const BaseCompletion = require('../baseCompletion');
 class Minions extends BaseCompletion {
 
     constructor() {
-        super('minions', 'Minions', 673, 595);
+        super('minions', 'Minions', 675, 595);
     }
 
     calculateCompletion(uuid, profileData, playerData) {
