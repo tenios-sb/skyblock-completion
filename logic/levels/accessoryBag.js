@@ -4,7 +4,7 @@ const calculateMagicPower = require('../util/magicPower');
 class AccessoryBag extends BaseLevel {
 
     constructor() {
-        super('talismans', 'Accessory Bag', 1299);
+        super('talismans', 'Accessory Bag', 1333);
     }
 
     async calculateXp(uuid, profileData, playerData) {

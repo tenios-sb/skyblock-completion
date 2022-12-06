@@ -151,6 +151,7 @@ const taliData = {
     BINGO_TALISMAN: { line: 'BINGO', rarity: 0 },
     BINGO_RING: { line: 'BINGO', rarity: 1 },
     BINGO_ARTIFACT: { line: 'BINGO', rarity: 2 },
+    BINGO_RELIC: { line: 'BINGO', rarity: 3 },
 
     BURSTSTOPPER_TALISMAN: { line: 'BURSTSTOPPER', rarity: 2 },
     BURSTSTOPPER_ARTIFACT: { line: 'BURSTSTOPPER', rarity: 3 },
@@ -178,6 +179,17 @@ const taliData = {
     VACCINE_TALISMAN: { line: 'VACCINE', rarity: 0 },
     VACCINE_RING: { line: 'VACCINE', rarity: 1 },
     VACCINE_ARTIFACT: { line: 'VACCINE', rarity: 2 },
+
+    WHITE_GIFT_TALISMAN: {line: 'GIFT', rarity: 0},
+    GREEN_GIFT_TALISMAN: {line: 'GIFT', rarity: 1},
+    BLUE_GIFT_TALISMAN: {line: 'GIFT', rarity: 2},
+    PURPLE_GIFT_TALISMAN: {line: 'GIFT', rarity: 3},
+    GOLD_GIFT_TALISMAN: {line: 'GIFT', rarity: 4},
+
+    
+    GLACIAL_TALISMAN: {line: 'GLACIAL', rarity: 0},
+    GLACIAL_RING: {line: 'GLACIAL', rarity: 1},
+    GLACIAL_ARTIFACT: {line: 'GLACIAL', rarity: 2},
 
     FARMING_TALISMAN: { line: 'FARMING', rarity: 0 },
     WOOD_TALISMAN: { line: 'WOOD', rarity: 1 },

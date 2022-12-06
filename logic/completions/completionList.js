@@ -107,6 +107,7 @@ module.exports = getCompletions = () => {
         new EssenceShop('Wither', 24550),
         new EssenceShop('Dragon', 51275),
         new EssenceShop('Spider', 32725),
+        new EssenceShop('Ice', 59100),
         //classes
         new DungeonClass('Archer'),
         new DungeonClass('Mage'),
