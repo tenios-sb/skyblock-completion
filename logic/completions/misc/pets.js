@@ -5,7 +5,7 @@ const mythicPets = ['JERRY', 'FLYING_FISH', 'BAT', 'RAT', 'ENDERMAN', 'ENDERMITE
 class Pets extends BaseCompletion {
 
     constructor() {
-        super('pets', 'Pets', 59, -1);
+        super('pets', 'Pets', 60, -1);
     }
 
     calculateCompletion(uuid, profileData, playerData) {
