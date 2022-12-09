@@ -26,18 +26,6 @@ class Pets extends BaseCompletion {
     }
 
     getRarityDebuff(rarity, pet) {
-        if (pet === 'KUUDRA') {
-            switch (rarity) {
-                case 'COMMON':
-                    return 0.25;
-                case 'UNCOMMON':
-                    return 0.5;
-                case 'RARE':
-                    return 0.75
-                default:
-                    return 1;
-            }
-        }
         if (mythicPets.includes(pet)) {
             switch (rarity) {
                 case 'COMMON': return 0.2;
@@ -60,8 +48,6 @@ class Pets extends BaseCompletion {
     getMaxXp(pet) {
         if (pet === 'GOLDEN_DRAGON')
             return 210255386;
-        if (pet === 'KUUDRA')
-            return 18608500
         return 25353230
     }
 

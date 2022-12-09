@@ -3,7 +3,7 @@ const BaseLevel = require('./baseLevel');
 class PetScore extends BaseLevel {
 
     constructor() {
-        super('pet_score', 'Pet Score', 902);
+        super('pet_score', 'Pet Score', 905);
     }
 
     getRarityValue(rarity) {

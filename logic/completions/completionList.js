@@ -4,7 +4,7 @@ const PowderCommission = require('./skills/powderCompletions');
 const { FarmingFortuneShop, FarmingCap } = require('./skills/jacobShop');
 const TropyhFish = require('./skills/trophyFish');
 const { Skill, Social } = require('./skills/skills');
-const BossCollection = require('./dungeons/bossCollections');
+const {BossCollection, KuudraCollection} = require('./dungeons/bossCollections');
 const Catacombs = require('./dungeons/catacombs');
 const DungeonClass = require('./dungeons/dungeonClasses');
 const EssenceShop = require('./dungeons/essenceShop');
@@ -99,6 +99,7 @@ module.exports = getCompletions = () => {
         new BossCollection("5"),
         new BossCollection("6"),
         new BossCollection("7"),
+        new KuudraCollection(),
         //dungeons
         new Catacombs(),
         new DungeonJournals(),
@@ -108,6 +109,7 @@ module.exports = getCompletions = () => {
         new EssenceShop('Dragon', 51275),
         new EssenceShop('Spider', 32725),
         new EssenceShop('Ice', 59100),
+        new EssenceShop('Crimson', 37500),
         //classes
         new DungeonClass('Archer'),
         new DungeonClass('Mage'),
