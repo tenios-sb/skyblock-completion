@@ -1,5 +1,5 @@
 const BaseCompletion = require('../baseCompletion');
-const essenceCosts = require('../../util/constants');
+const { essenceCosts } = require('../../util/constants');
 
 
 class EssenceShop extends BaseCompletion {

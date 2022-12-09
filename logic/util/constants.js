@@ -38,15 +38,16 @@ const essenceCosts = {
         'cooled_forges': { 0: 0, 1: 100, 2: 1100, 3: 3100, 4: 6100, 5: 11100 },
         'frozen_skin': { 0: 0, 1: 1000, 2: 2500, 3: 4500, 4: 7500, 5: 12500 },
         'season_of_joy': { 0: 0, 1: 200, 2: 600, 3: 1400, 4: 2900, 5: 5000, 6: 8000, 7: 11000, 8: 15000, 9: 19000, 10: 23000 }
-    }, 'crimson':{
-        'strongarm_kuudra': {0:0, 1:1000, 2:3000},
-        'fresh_tools_kuudra': {0:0, 1:200, 2:600, 3:1200, 4:2000, 5:3000},
-        'fungus_fortuna': {0:0, 1:100, 2:300, 3:600, 4:1000, 5:1500, 6:2100, 7:2800, 8:3600, 9:4500, 10:5500},
-        'harena_fortuna': {0:0, 1:100, 2:300, 3:600, 4:1000, 5:1500, 6:2100, 7:2800, 8:3600, 9:4500, 10:5500},
-        'headstart_kuudra': {0:0, 1:100, 2:300, 3:600, 4:1000, 5:1500},
-        'master_kuudra': {0:0, 1:5000},
-        'crimson_training': {0:0, 1:250, 2:1500, 3:6500},
-        'wither_piper': {0:0, 1:500, 2:1250, 3:2500, 4:4500, 5:7500}
+    },
+    'crimson': {
+        'strongarm_kuudra': { 0: 0, 1: 1000, 2: 3000 },
+        'fresh_tools_kuudra': { 0: 0, 1: 200, 2: 600, 3: 1200, 4: 2000, 5: 3000 },
+        'fungus_fortuna': { 0: 0, 1: 100, 2: 300, 3: 600, 4: 1000, 5: 1500, 6: 2100, 7: 2800, 8: 3600, 9: 4500, 10: 5500 },
+        'harena_fortuna': { 0: 0, 1: 100, 2: 300, 3: 600, 4: 1000, 5: 1500, 6: 2100, 7: 2800, 8: 3600, 9: 4500, 10: 5500 },
+        'headstart_kuudra': { 0: 0, 1: 100, 2: 300, 3: 600, 4: 1000, 5: 1500 },
+        'master_kuudra': { 0: 0, 1: 5000 },
+        'crimson_training': { 0: 0, 1: 250, 2: 1500, 3: 6500 },
+        'wither_piper': { 0: 0, 1: 500, 2: 1250, 3: 2500, 4: 4500, 5: 7500 }
     }
 }
 
@@ -232,16 +233,16 @@ const taliData = {
     VACCINE_RING: { line: 'VACCINE', rarity: 1 },
     VACCINE_ARTIFACT: { line: 'VACCINE', rarity: 2 },
 
-    WHITE_GIFT_TALISMAN: {line: 'GIFT', rarity: 0},
-    GREEN_GIFT_TALISMAN: {line: 'GIFT', rarity: 1},
-    BLUE_GIFT_TALISMAN: {line: 'GIFT', rarity: 2},
-    PURPLE_GIFT_TALISMAN: {line: 'GIFT', rarity: 3},
-    GOLD_GIFT_TALISMAN: {line: 'GIFT', rarity: 4},
+    WHITE_GIFT_TALISMAN: { line: 'GIFT', rarity: 0 },
+    GREEN_GIFT_TALISMAN: { line: 'GIFT', rarity: 1 },
+    BLUE_GIFT_TALISMAN: { line: 'GIFT', rarity: 2 },
+    PURPLE_GIFT_TALISMAN: { line: 'GIFT', rarity: 3 },
+    GOLD_GIFT_TALISMAN: { line: 'GIFT', rarity: 4 },
 
-    
-    GLACIAL_TALISMAN: {line: 'GLACIAL', rarity: 0},
-    GLACIAL_RING: {line: 'GLACIAL', rarity: 1},
-    GLACIAL_ARTIFACT: {line: 'GLACIAL', rarity: 2},
+
+    GLACIAL_TALISMAN: { line: 'GLACIAL', rarity: 0 },
+    GLACIAL_RING: { line: 'GLACIAL', rarity: 1 },
+    GLACIAL_ARTIFACT: { line: 'GLACIAL', rarity: 2 },
 
     FARMING_TALISMAN: { line: 'FARMING', rarity: 0 },
     WOOD_TALISMAN: { line: 'WOOD', rarity: 1 },
