@@ -296,6 +296,7 @@ const taliData = {
     ABICASE: { line: 'ABICASE', rarity: 2 },
     TRAPPER_CREST: { line: 'TRAPPER', rarity: 0 },
     ARCHAEOLOGIST_COMPASS: { line: 'ARCHAEOLOGIST', rarity: 0 },
+    KUUDRA_FOLLOWER_ARTIFACT: {line:'MANDIBLE', rarity: 3}
 }
 
 module.exports = {

@@ -34,7 +34,7 @@ class DungeonCompletions extends BaseLevel {
 class BossCollections extends BaseLevel {
 
     constructor() {
-        super('boss_collections', 'Dungeon Boss Collection', 915);
+        super('boss_collections', 'Dungeon Boss Collection', 1015);
         this.lowTiers = ['bonzo_red_nose', 'bonzo_bonzo_mask', 'bonzo_gold_bonzo_head',
             'scarf_red_scarf', 'scarf_scarf_thesis', 'scarf_gold_scarf_head',
             'professor_suspicious_vial', 'professor_adaptive_leggings', 'professor_gold_professor_head',
@@ -58,11 +58,22 @@ class BossCollections extends BaseLevel {
         this.lowTiers.forEach(tier => {
             if ((profile?.tutorial || []).includes(`boss_collection_claimed_${tier}`))
                 this.xp += 15;
-        })
+        });
         this.highTiers.forEach(tier => {
             if ((profile?.tutorial || []).includes(`boss_collection_claimed_${tier}`))
                 this.xp += 25;
-        })
+        });
+        let kuudraCollection = 0;
+        kuudraCollection += profile?.nether_island_player_data?.kuudra_completed_tiers?.none || 0;
+        kuudraCollection += 2 * (profile?.nether_island_player_data?.kuudra_completed_tiers?.hot || 0);
+        kuudraCollection += 3 * (profile?.nether_island_player_data?.kuudra_completed_tiers?.burning || 0);
+        kuudraCollection += 4 * (profile?.nether_island_player_data?.kuudra_completed_tiers?.fiery || 0);
+        kuudraCollection += 5 * (profile?.nether_island_player_data?.kuudra_completed_tiers?.infernal || 0);
+        if (kuudraCollection >= 5000) this.xp += 30
+        if (kuudraCollection >= 2000) this.xp += 25
+        if (kuudraCollection >= 500) this.xp += 20
+        if (kuudraCollection >= 100) this.xp += 15
+        if (kuudraCollection >= 10) this.xp += 10
     }
 }
 

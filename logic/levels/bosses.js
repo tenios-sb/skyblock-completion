@@ -39,7 +39,7 @@ class Dragons extends BaseLevel {
 class Kuudra extends BaseLevel {
 
     constructor() {
-        super('kuudra_completion', 'Defeat Kuudra', 200);
+        super('kuudra_completion', 'Defeat Kuudra', 300);
     }
 
 
@@ -54,6 +54,8 @@ class Kuudra extends BaseLevel {
             this.xp += 60;
         if (profile?.nether_island_player_data?.kuudra_completed_tiers?.fiery > 0)
             this.xp += 80;
+        if (profile?.nether_island_player_data?.kuudra_completed_tiers?.infernal > 0)
+            this.xp += 100;
     }
 }
 

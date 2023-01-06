@@ -26,6 +26,7 @@ const Minions = require('./misc/minions');
 const Harp = require('./misc/harp');
 const MagicPower = require('./misc/magicPower');
 const Collections = require('./misc/collections');
+const KuudraWave = require('./misc/kuudraWave');
 
 module.exports = getCompletions = () => {
     return [
@@ -65,6 +66,8 @@ module.exports = getCompletions = () => {
         new Dojo('Control', 'lock_head'),
         new Dojo('Tenacity', 'fireball'),
 
+        new KuudraCollection(),
+        new KuudraWave(),
         // farming
         new FarmingCap(),
         new FarmingFortuneShop(),
@@ -99,7 +102,6 @@ module.exports = getCompletions = () => {
         new BossCollection("5"),
         new BossCollection("6"),
         new BossCollection("7"),
-        new KuudraCollection(),
         //dungeons
         new Catacombs(),
         new DungeonJournals(),

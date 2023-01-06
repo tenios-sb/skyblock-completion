@@ -1,4 +1,4 @@
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle, SelectMenuBuilder } = require('discord.js');
+const { ActionRowBuilder, StringSelectMenuBuilder } = require('discord.js');
 
 const BaseCommand = require('./baseCommand');
 const Player = require('../../logic/player');
@@ -12,7 +12,7 @@ class LevelsCommand extends BaseCommand {
 
     async handleCommand(interaction) {
         await interaction.deferReply().catch(() => console.log('Error defering reply'));
-        //find the username
+        //find the username 
         const name = interaction.options.getString('username') || interaction.user.username;
         const profile = interaction.options.getString('profile') || 'latest';
         console.log(`Running Levels on ${name} (${profile}) for ${interaction.user?.tag} in ${interaction.guild?.name}`)
@@ -29,7 +29,7 @@ class LevelsCommand extends BaseCommand {
 
         let embed = this.getLevelsEmbed(player.username, playerProfile);
         const selectRow = new ActionRowBuilder().addComponents(
-            new SelectMenuBuilder()
+            new StringSelectMenuBuilder()
                 .setCustomId('selectProfile')
                 .setPlaceholder(playerProfile.name + this.getProfileEmoji(playerProfile.mode))
                 .addOptions(player.profiles.map(profile => {

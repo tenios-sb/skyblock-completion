@@ -1,4 +1,4 @@
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle, SelectMenuBuilder } = require('discord.js');
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle, StringSelectMenuBuilder } = require('discord.js');
 
 const BaseCommand = require('./baseCommand');
 const Player = require('../../logic/player');
@@ -35,7 +35,7 @@ class CompletionCommand extends BaseCommand{
                 .setLabel('💯')
                 .setStyle(ButtonStyle.Primary))
         const selectRow = new ActionRowBuilder().addComponents(
-            new SelectMenuBuilder()
+            new StringSelectMenuBuilder()
                 .setCustomId('selectProfile')
                 .setPlaceholder(playerProfile.name + this.getProfileEmoji(playerProfile.mode))
                 .addOptions(player.profiles.map(profile => {
